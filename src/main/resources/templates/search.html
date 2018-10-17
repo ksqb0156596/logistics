@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物流信息查询</title>
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css" />
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
+    <script src="/js/jquery.fileupload.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <link href="/js/layui/css/layui.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div style="width: 80%;margin: 50px auto auto;">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="text" name="id" id="id" required  lay-verify="required" placeholder="请输入订单号或姓名或手机号" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </form>
+        <div style="width:80%;margin:auto">
+            <button style="float: right" class="layui-btn layui-btn-normal" onclick="search()">查询</button>
+            <div style="clear: both"></div>
+        </div>
+        <div style="width: 80%;overflow-x: auto;margin: 100px auto auto;">
+            <table id="searchTable"></table>
+        </div>
+    </div>
+    <script src="/js/search.js"></script>
+</body>
+</html>

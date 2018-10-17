@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>赠品信息导入</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css" />
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
+    <script src="/js/jquery.fileupload.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <link href="/js/layui/css/layui.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div style="margin-top: 50px;text-align: center;margin-bottom: 10px">
+        <input type="file" id="excelUpload" name="file" style="display: none;"/><button class="layui-btn" onclick="upload()">上传</button>
+    </div>
+    <div style="text-align: center;font-size: small;margin-bottom: 30px;color: blue">
+        <a href="/file/template.xlsx">点击下载模板</a>
+    </div>
+    <div style="width: 80%;overflow-x: auto;margin: auto">
+        <table id="showData"></table>
+    </div>
+    <script src="/js/upload.js">
+
+    </script>
+</body>
+</html>

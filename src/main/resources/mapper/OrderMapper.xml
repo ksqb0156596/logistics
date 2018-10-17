@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haier.personal.logistics.dao.OrderInfoDAO">
+    <select id="findList" resultType="com.haier.personal.logistics.entity.Order">
+        SELECT o.id as id,o.address as address,o.consignee as consignee,o.order_no as orderNo,o.telphone as telphone,
+        c.id as `categoryInfo.id`,c.category_count as `categoryInfo.categoryCount`,c.category_name as `categoryInfo.categoryName`,
+        c.express_name as `categoryInfo.expressName`,c.express_number as `categoryInfo.expressNumber`,c.order_no as `categoryInfo.orderNo`,
+        c.remark as `categoryInfo.remark`,c.send_date as `categoryInfo.sendDate`
+        FROM category_info c INNER JOIN order_info o ON c.order_no = o.order_no
+        WHERE o.order_no = #{id} OR o.consignee = #{id} OR o.telphone = #{id}
+    </select>
+    <insert id="insertOrderInfo" parameterType="com.haier.personal.logistics.entity.OrderInfo">
+        INSERT INTO order_info (address,consignee,order_no,telphone) VALUES (#{address},#{consignee},#{orderNo},#{telphone})
+    </insert>
+    <insert id="insertCategoryInfo" parameterType="com.haier.personal.logistics.entity.CategoryInfo">
+        INSERT INTO category_info (category_count,category_name,express_name,
+        express_number,order_no,remark,send_date) VALUES
+            (#{categoryCount},#{categoryName},#{expressName},
+            #{expressNumber},#{orderNo},#{remark},#{sendDate})
+
+    </insert>
+</mapper>
