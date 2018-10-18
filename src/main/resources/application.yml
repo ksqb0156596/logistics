@@ -2,8 +2,6 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://132.232.157.92:3306/logistics?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
-    username: admin001
-    password: Haier,668
   thymeleaf:
     cache: false
     mode: HTML5
